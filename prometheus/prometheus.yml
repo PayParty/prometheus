@@ -61,6 +61,6 @@ scrape_configs:
       - 'tasks.node-exporter'
       type: 'A'
       port: 9100
-    
+
     static_configs:
-         - targets: ['node-exporter:9100']
+        - targets: ['node-exporter:9100']
