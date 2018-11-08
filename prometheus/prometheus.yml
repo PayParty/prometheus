@@ -10,7 +10,7 @@ global:
 # Here it's Prometheus itself.
 scrape_configs:
   # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
-  - job_name: 'payparty-services'
+  - job_name: 'PayParty Services'
 
     scheme: https
     # Override the global default and scrape targets from this job every 5 seconds.
@@ -20,3 +20,12 @@ scrape_configs:
       - targets: ['api.payparty.com.br']
         labels:
           group: 'production'
+
+      - targets: ['stage-api.payparty.com.br']
+        labels:
+          group: 'staging'
+
+      - targets: ['dev-api.payparty.com.br']
+        labels:
+          group: 'development'
+      
